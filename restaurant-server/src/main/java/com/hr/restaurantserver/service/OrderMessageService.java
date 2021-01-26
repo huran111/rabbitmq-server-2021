@@ -11,12 +11,15 @@ import com.hr.restaurantserver.enummeration.RestaurantStatus;
 import com.hr.restaurantserver.po.ProductPO;
 import com.hr.restaurantserver.po.RestaurantPO;
 import com.rabbitmq.client.*;
+import com.rabbitmq.client.AMQP.BasicProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeoutException;
 
 @Slf4j
@@ -46,21 +49,21 @@ public class OrderMessageService {
                     true,
                     false,
                     null);
-
+            //设置队列的参数
+            Map<String, Object> args = new HashMap<>(16);
+            args.put("x-message-ttl", 15000);
             channel.queueDeclare(
                     "queue.restaurant",
                     true,
                     false,
                     false,
-                    null);
+                    args);
 
             channel.queueBind(
                     "queue.restaurant",
                     "exchange.order.restaurant",
                     "key.restaurant");
-            channel.basicQos(2);
-            //autoAck=false 关闭自动ack
-            channel.basicConsume("queue.restaurant", false, deliverCallback, consumerTag -> {
+            channel.basicConsume("queue.restaurant", true, deliverCallback, consumerTag -> {
             });
             while (true) {
                 Thread.sleep(100);
@@ -95,48 +98,9 @@ public class OrderMessageService {
                 orderMessageDTO.setConfirmed(false);
             }
             log.info("sendMessage:restaurantOrderMessageDTO:{}", orderMessageDTO);
-            //AutoClosable //自动关闭连接 ，发送完消息后，会自动关闭连接
-//            try (Connection connection = connectionFactory.newConnection();
-//                 Channel channel = connection.createChannel()) {
             String messageToSend = objectMapper.writeValueAsString(orderMessageDTO);
-            //mandatory 当消息无法路由的时候会调用发送方的returnListener
-//                channel.addReturnListener(new ReturnListener() {
-//                    @Override
-//                    public void handleReturn(int replyCode, String replyText, String exchange, String routingKey, AMQP.BasicProperties properties, byte[] body) throws IOException {
-//                        System.out.println("===============================================================================================================================================");
-//                        log.info("replyCode:{}", replyCode);
-//                        log.info("replyText:{}", replyText);
-//                        log.info("exchange:{}", exchange);
-//                        log.info("routingKey:{}", routingKey);
-//                        log.info("properties:{}", properties);
-//                        log.info("body:{}", new String(body));
-//                        System.out.println("===============================================================================================================================================");
-//                    }
-//                });
-            channel.addReturnListener(new ReturnCallback() {
-                @Override
-                public void handle(Return returnMessage) {
-                    log.info("========================================================================================================================");
-                    ObjectMapper mapper = new ObjectMapper();
-                    try {
-                        final byte[] body = returnMessage.getBody();
-                        System.out.println(new java.lang.String(body));
-                        System.out.println(mapper.writeValueAsString(returnMessage));
-                    } catch (JsonProcessingException e) {
-                        e.printStackTrace();
-                    }
-                    log.info("========================================================================================================================");
-                }
-            });
-            //multiple 签收单条
-//            if (message.getEnvelope().getDeliveryTag() % 5 == 0) {
-//                channel.basicAck(message.getEnvelope().getDeliveryTag(), true);
-//            }
-
             channel.basicAck(message.getEnvelope().getDeliveryTag(), false);
-            //requeue=true 重回队列
-            // channel.basicNack(message.getEnvelope().getDeliveryTag(),false,true);
-            //mandatory 当消息无法路由的时候会调用发送方的returnListener
+
             channel.basicPublish("exchange.order.restaurant", "key.order", true, null, messageToSend.getBytes());
             try {
                 Thread.sleep(1_000);

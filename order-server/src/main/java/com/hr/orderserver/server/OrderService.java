@@ -50,32 +50,16 @@ public class OrderService {
              Channel channel = connection.createChannel()) {
             String messageToSend = objectMapper.writeValueAsString(orderMessageDTO);
             channel.confirmSelect();
-            //异步确认
-            ConfirmListener confirmListener = new ConfirmListener() {
-                @Override
-                public void handleAck(long deliveryTag, boolean multiple) throws IOException {
-                    //deliveryTag 发送端的消息序号
-                    //multiple 如果multiple是true，在确认多条消息，在确认单条消息
-                    log.info("ACK  deliveryTag:{},multiple:{}", deliveryTag, multiple);
-                }
-                @Override
-                public void handleNack(long deliveryTag, boolean multiple) throws IOException {
-                    //deliveryTag 发送端的消息序号
-                    //multiple 如果multiple是true，在确认多条消息，在确认单条消息
-                    log.info("NACK  deliveryTag:{},multiple:{}", deliveryTag, multiple);
-                }
-            };
-                channel.addConfirmListener(confirmListener);
-            for (int i = 0; i < 50; i++) {
-                channel.basicPublish("exchange.order.restaurant", "key.restaurant", null, messageToSend.getBytes());
-                log.info("========= send");
-            }
+            //TTL过期消息 针对单条消息
+          //  AMQP.BasicProperties properties=new AMQP.BasicProperties().builder().expiration("15000").build();
 
-//                if (channel.waitForConfirms()) {
-//                    log.info("=============>>>> RabbitMQ Confirms success");
-//                } else {
-//                    log.info("=============>>>> RabbitMQ Confirms failed");
-//                }
+            channel.basicPublish("exchange.order.restaurant", "key.restaurant", null, messageToSend.getBytes());
+                log.info("========= send");
+                if (channel.waitForConfirms()) {
+                    log.info("=============>>>> RabbitMQ Confirms success");
+                } else {
+                    log.info("=============>>>> RabbitMQ Confirms failed");
+                }
             Thread.sleep(2_000);
         } catch (InterruptedException e) {
             e.printStackTrace();
