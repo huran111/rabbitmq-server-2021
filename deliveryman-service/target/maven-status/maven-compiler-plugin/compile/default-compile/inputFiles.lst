@@ -1,0 +1,9 @@
+E:\rabbit-mq-server\deliveryman-service\src\main\java\com\hr\deliverymanserver\dao\DeliverymanDao.java
+E:\rabbit-mq-server\deliveryman-service\src\main\java\com\hr\deliverymanserver\DeliverymanServiceManagerApplication.java
+E:\rabbit-mq-server\deliveryman-service\src\main\java\com\hr\deliverymanserver\enummeration\OrderStatus.java
+E:\rabbit-mq-server\deliveryman-service\src\main\java\com\hr\deliverymanserver\service\OrderMessageService.java
+E:\rabbit-mq-server\deliveryman-service\src\main\java\com\hr\deliverymanserver\config\AsyncTaskConfig.java
+E:\rabbit-mq-server\deliveryman-service\src\main\java\com\hr\deliverymanserver\config\RabbitConfig.java
+E:\rabbit-mq-server\deliveryman-service\src\main\java\com\hr\deliverymanserver\enummeration\DeliverymanStatus.java
+E:\rabbit-mq-server\deliveryman-service\src\main\java\com\hr\deliverymanserver\dto\OrderMessageDTO.java
+E:\rabbit-mq-server\deliveryman-service\src\main\java\com\hr\deliverymanserver\po\DeliverymanPO.java
