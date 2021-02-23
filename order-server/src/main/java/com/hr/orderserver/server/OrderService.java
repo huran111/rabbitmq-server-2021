@@ -50,9 +50,6 @@ public class OrderService {
              Channel channel = connection.createChannel()) {
             String messageToSend = objectMapper.writeValueAsString(orderMessageDTO);
             channel.confirmSelect();
-            //TTL过期消息 针对单条消息
-          //  AMQP.BasicProperties properties=new AMQP.BasicProperties().builder().expiration("15000").build();
-
             channel.basicPublish("exchange.order.restaurant", "key.restaurant", null, messageToSend.getBytes());
                 log.info("========= send");
                 if (channel.waitForConfirms()) {

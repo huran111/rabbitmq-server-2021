@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1adac38-a17c-482b-b5c0-7d0fdb195149" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/config/RabbitBeanConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/怎么样变成死信.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/死信队列.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/死信队列数据流转.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/死信队列设置方法.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/config/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/config/RabbitConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/server/OrderMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/server/OrderMessageService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/server/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/server/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/service/OrderMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/service/OrderMessageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restaurant-server/target/classes/com/hr/restaurantserver/service/OrderMessageService$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/restaurant-server/target/classes/com/hr/restaurantserver/service/OrderMessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant-server/target/classes/com/hr/restaurantserver/service/OrderMessageService.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -41,107 +48,103 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/service/OrderMessageService.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.2.6.RELEASE/spring-rabbit-2.2.6.RELEASE-sources.jar!/org/springframework/amqp/rabbit/connection/CachingConnectionFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-885">
-              <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
+            <state relative-caret-position="586">
+              <caret line="534" column="24" selection-start-line="534" selection-start-column="24" selection-end-line="534" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="docComment;class#CachingConnectionFactory#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/5.2.0/amqp-client-5.2.0-sources.jar!/com/rabbitmq/client/AMQP.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.2.6.RELEASE/spring-rabbit-2.2.6.RELEASE-sources.jar!/org/springframework/amqp/rabbit/core/RabbitAdmin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-845">
-              <caret line="1830" column="27" selection-start-line="1830" selection-start-column="27" selection-end-line="1830" selection-end-column="27" />
+            <state relative-caret-position="196">
+              <caret line="603" column="30" selection-start-line="603" selection-start-column="30" selection-end-line="603" selection-end-column="30" />
+              <folding>
+                <element signature="e#6373#6374#0" expanded="true" />
+                <element signature="e#6410#6411#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.2.6.RELEASE/spring-rabbit-2.2.6.RELEASE-sources.jar!/org/springframework/amqp/rabbit/core/RabbitTemplate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="2046" column="39" selection-start-line="2046" selection-start-column="39" selection-end-line="2046" selection-end-column="39" />
+              <folding>
+                <element signature="e#76363#76364#0" expanded="true" />
+                <element signature="e#76416#76417#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.2.6.RELEASE/spring-rabbit-2.2.6.RELEASE-sources.jar!/org/springframework/amqp/rabbit/core/ChannelCallback.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="347">
+              <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-amqp/2.2.6.RELEASE/spring-amqp-2.2.6.RELEASE-sources.jar!/org/springframework/amqp/core/Exchange.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-amqp/2.2.6.RELEASE/spring-amqp-2.2.6.RELEASE-sources.jar!/org/springframework/amqp/core/DeclarableCustomizer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="370">
+              <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://D:/src/jdk1.8.0_191/src.zip!/java/util/function/Function.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-237">
+              <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/server/OrderService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="52" column="28" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/config/RabbitConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="27" column="75" selection-start-line="27" selection-start-column="75" selection-end-line="27" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/RestaurantApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/config/AsyncTaskConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/server/OrderMessageService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1679">
-              <caret line="130" column="29" selection-start-line="130" selection-start-column="29" selection-end-line="130" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/5.2.0/amqp-client-5.2.0-sources.jar!/com/rabbitmq/client/Channel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41811">
-              <caret line="1290" column="9" selection-start-line="1290" selection-start-column="9" selection-end-line="1290" selection-end-column="9" />
+            <state relative-caret-position="-780">
+              <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/5.2.0/amqp-client-5.2.0-sources.jar!/com/rabbitmq/client/impl/recovery/AutorecoveringChannel.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.2.6.RELEASE/spring-rabbit-2.2.6.RELEASE-sources.jar!/org/springframework/amqp/rabbit/connection/AbstractRoutingConnectionFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
-              <folding>
-                <element signature="e#28680#28681#0" expanded="true" />
-                <element signature="e#28733#28734#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="213">
+              <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/5.2.0/amqp-client-5.2.0-sources.jar!/com/rabbitmq/client/ShutdownListener.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.2.6.RELEASE/spring-rabbit-2.2.6.RELEASE-sources.jar!/org/springframework/amqp/rabbit/connection/ConnectionListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+            <state relative-caret-position="407">
+              <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -177,6 +180,10 @@
       <find>returnMessage</find>
       <find>===============================================================================================================================================</find>
       <find>deliveryTag</find>
+      <find>linstening</find>
+      <find>exchange.order.order</find>
+      <find>autoStartup</find>
+      <find>afterPropertiesSet</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -186,7 +193,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="2021-01-26-TTL" />
       </map>
     </option>
   </component>
@@ -201,7 +208,6 @@
         <option value="$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/RestaurantApplication.java" />
         <option value="$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/dao/RestaurantDao.java" />
         <option value="$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/dto/OrderMessageDTO.java" />
-        <option value="$PROJECT_DIR$/order-server/pom.xml" />
         <option value="$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/dto/OrderMessageDTO.java" />
         <option value="$PROJECT_DIR$/restaurant-server/pom.xml" />
         <option value="$PROJECT_DIR$/deliveryman-service/src/main/resources/application.properties" />
@@ -211,7 +217,6 @@
         <option value="$PROJECT_DIR$/deliveryman-service/src/main/java/com/hr/deliverymanserver/po/DeliverymanPO.java" />
         <option value="$PROJECT_DIR$/deliveryman-service/src/main/java/com/hr/deliverymanserver/service/OrderMessageService.java" />
         <option value="$PROJECT_DIR$/deliveryman-service/pom.xml" />
-        <option value="$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/config/RabbitConfig.java" />
         <option value="$PROJECT_DIR$/order-server/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/dao/ProductDao.java" />
         <option value="$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/handler/StatusHandler.java" />
@@ -229,13 +234,16 @@
         <option value="$PROJECT_DIR$/settlement-service/src/main/java/com/hr/settlementserver/dto/OrderMessageDTO.java" />
         <option value="$PROJECT_DIR$/settlement-service/src/main/java/com/hr/settlementserver/service/OrderMessageService.java" />
         <option value="$PROJECT_DIR$/settlement-service/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/server/OrderMessageService.java" />
         <option value="$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/controller/OrderController.java" />
         <option value="$PROJECT_DIR$/mysql-test/pom.xml" />
         <option value="$PROJECT_DIR$/mysql-test/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/config/RabbitConfig.java" />
-        <option value="$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/service/OrderMessageService.java" />
         <option value="$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/server/OrderService.java" />
+        <option value="$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/service/OrderMessageService.java" />
+        <option value="$PROJECT_DIR$/order-server/pom.xml" />
+        <option value="$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/config/RabbitConfig.java" />
+        <option value="$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/server/OrderMessageService.java" />
+        <option value="$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/config/RabbitBeanConfig.java" />
       </list>
     </option>
   </component>
@@ -283,7 +291,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -346,83 +353,11 @@
               <item name="orderserver" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="rabbit-mq-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rabbit-mq-server" type="462c0819:PsiDirectoryNode" />
-              <item name="order-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rabbit-mq-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rabbit-mq-server" type="462c0819:PsiDirectoryNode" />
-              <item name="restaurant-server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rabbit-mq-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rabbit-mq-server" type="462c0819:PsiDirectoryNode" />
-              <item name="restaurant-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rabbit-mq-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rabbit-mq-server" type="462c0819:PsiDirectoryNode" />
-              <item name="restaurant-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rabbit-mq-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rabbit-mq-server" type="462c0819:PsiDirectoryNode" />
-              <item name="restaurant-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rabbit-mq-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rabbit-mq-server" type="462c0819:PsiDirectoryNode" />
-              <item name="restaurant-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="restaurantserver" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rabbit-mq-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rabbit-mq-server" type="462c0819:PsiDirectoryNode" />
-              <item name="restaurant-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="restaurantserver" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rabbit-mq-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rabbit-mq-server" type="462c0819:PsiDirectoryNode" />
-              <item name="restaurant-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="restaurantserver" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rabbit-mq-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rabbit-mq-server" type="462c0819:PsiDirectoryNode" />
-              <item name="restaurant-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="restaurantserver" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -439,6 +374,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -448,6 +384,9 @@
     <selection>jr</selection>
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.hr.orderserver.config" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\rabbit-mq-server\mysql-test\src\main\resources" />
       <recent name="E:\rabbit-mq-server\order-server\src\main\java\com\hr\orderserver\server" />
@@ -472,9 +411,9 @@
         </RuleState>
       </list>
     </option>
-    <option name="contentProportion" value="0.24972914" />
+    <option name="contentProportion" value="0.15963204" />
   </component>
-  <component name="RunManager" selected="Spring Boot.DeliverymanServiceManagerApplication">
+  <component name="RunManager" selected="Spring Boot.OrderServerApplication">
     <configuration name="OrderMessageService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.hr.orderserver.server.OrderMessageService" />
       <module name="order-server" />
@@ -545,7 +484,15 @@
       <workItem from="1611279876696" duration="2148000" />
       <workItem from="1611570698182" duration="5324000" />
       <workItem from="1611624615545" duration="267000" />
-      <workItem from="1611658401016" duration="1020000" />
+      <workItem from="1611658401016" duration="3013000" />
+      <workItem from="1611711106096" duration="527000" />
+      <workItem from="1611828216807" duration="712000" />
+      <workItem from="1611833362608" duration="104000" />
+      <workItem from="1611833504248" duration="1155000" />
+      <workItem from="1611886049024" duration="1277000" />
+      <workItem from="1612661297482" duration="1241000" />
+      <workItem from="1612662971341" duration="239000" />
+      <workItem from="1614080810067" duration="3772000" />
     </task>
     <task id="LOCAL-00001" summary="1.消费端限流&#10;2.手动ACK&#10;3.消费端返回和确认机制">
       <created>1611658717077</created>
@@ -554,18 +501,25 @@
       <option name="project" value="LOCAL" />
       <updated>1611658717077</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1.TLL功能演示">
+      <created>1611659506895</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1611659506895</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37401000" />
+    <option name="totallyTimeSpent" value="48421000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.89694655" visible="true" weight="0.2411953" />
-      <window_info id="Structure" order="1" sideWeight="0.103053436" side_tool="true" visible="true" weight="0.2411953" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.31729323" visible="true" weight="0.21002132" />
+      <window_info id="Structure" order="1" sideWeight="0.6827068" side_tool="true" visible="true" weight="0.21002132" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="JRebel" order="4" side_tool="true" />
@@ -595,19 +549,19 @@
       <window_info anchor="bottom" id="Java Enterprise" order="20" />
       <window_info anchor="bottom" id="JProfiler" order="21" />
       <window_info anchor="bottom" id="JRebel Executor" order="22" />
-      <window_info anchor="bottom" id="Messages" order="23" weight="0.32934782" />
+      <window_info anchor="bottom" id="Messages" order="23" weight="0.32897604" />
       <window_info anchor="bottom" id="Debug with VisualVM" order="24" />
-      <window_info anchor="bottom" id="Run Dashboard" order="25" visible="true" weight="0.14379086" />
+      <window_info anchor="bottom" id="Run Dashboard" order="25" visible="true" weight="0.27952328" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.09605123" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.18569905" />
+      <window_info active="true" anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.10021322" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.04904051" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Codota" order="5" />
       <window_info anchor="right" id="Word Book" order="6" side_tool="true" />
       <window_info anchor="right" id="Alibaba ROS Templates" order="7" />
       <window_info anchor="right" id="Alibaba Function Compute" order="8" />
-      <window_info anchor="right" id="Database" order="9" visible="true" weight="0.016008537" />
+      <window_info anchor="right" id="Database" order="9" weight="0.015991472" />
       <window_info anchor="right" id="Palette&#9;" order="10" />
       <window_info anchor="right" id="Alibaba Log Console" order="11" />
       <window_info anchor="right" id="RestServices" order="12" />
@@ -618,26 +572,27 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1.消费端限流&#10;2.手动ACK&#10;3.消费端返回和确认机制" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.消费端限流&#10;2.手动ACK&#10;3.消费端返回和确认机制" />
+    <MESSAGE value="1.TLL功能演示" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.TLL功能演示" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/service/OrderMessageService.java</url>
-          <line>75</line>
+          <line>87</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/service/OrderMessageService.java</url>
-          <line>77</line>
+          <line>89</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/service/OrderMessageService.java</url>
-          <line>103</line>
+          <line>116</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
@@ -651,244 +606,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/po/ProductPO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/po/RestaurantPO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/dto/OrderMessageDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/dao/RestaurantDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/enummeration/OrderStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/dao/OrderDetailDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="27" column="17" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/po/OrderDetailsPO.java" />
-    <entry file="file://$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/enummeration/RestaurantStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/po/OrderDetailPO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/dao/ProductDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restaurant-server/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="107" selection-start-line="13" selection-start-column="4" selection-end-line="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settlement-service/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="106" selection-start-line="106" selection-end-line="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settlement-service/src/main/java/com/hr/settlementserver/enummeration/OrderStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settlement-service/src/main/java/com/hr/settlementserver/SettlementServiceManagerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restaurant-server/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="12" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settlement-service/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-57">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settlement-service/src/main/java/com/hr/settlementserver/config/AsyncTaskConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="43" column="75" lean-forward="true" selection-start-line="43" selection-start-column="75" selection-end-line="43" selection-end-column="75" />
-          <folding>
-            <element signature="e#1622#1623#0" expanded="true" />
-            <element signature="e#1649#1650#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settlement-service/src/main/java/com/hr/settlementserver/config/RabbitConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deliveryman-service/src/main/java/com/hr/deliverymanserver/enummeration/DeliverymanStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deliveryman-service/src/main/java/com/hr/deliverymanserver/service/OrderMessageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="39" column="114" selection-start-line="39" selection-start-column="114" selection-end-line="39" selection-end-column="114" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/enums/OrderStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settlement-service/src/main/java/com/hr/settlementserver/dao/SettlementDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settlement-service/src/main/java/com/hr/settlementserver/dto/OrderMessageDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/enummeration/ProductStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settlement-service/src/main/java/com/hr/settlementserver/service/SettlementService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settlement-service/src/main/java/com/hr/settlementserver/service/OrderMessageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1848">
-          <caret line="74" column="42" selection-start-line="74" selection-start-column="42" selection-end-line="74" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settlement-service/src/main/java/com/hr/settlementserver/po/SettlementPO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settlement-service/src/main/java/com/hr/settlementserver/enummeration/SettlementStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/controller/OrderController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="627">
@@ -915,14 +632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/order-server/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3399">
-          <caret line="103" column="12" selection-start-line="10" selection-start-column="2" selection-end-line="103" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/5.2.0/amqp-client-5.2.0-sources.jar!/com/rabbitmq/client/BuiltinExchangeType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -940,18 +649,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/OrderServerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#255#256#0" expanded="true" />
-            <element signature="e#328#329#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/src/jdk1.8.0_191/src.zip!/com/sun/org/apache/xpath/internal/operations/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -965,16 +662,41 @@
     <entry file="file://$PROJECT_DIR$/消费端ACK类型.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/service/OrderMessageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/5.2.0/amqp-client-5.2.0-sources.jar!/com/rabbitmq/client/AMQP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51780">
+          <caret line="1830" column="27" selection-start-line="1830" selection-start-column="27" selection-end-line="1830" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order-server/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/config/RabbitConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
+        <state relative-caret-position="510">
           <caret line="27" column="75" selection-start-line="27" selection-start-column="75" selection-end-line="27" selection-end-column="75" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/RestaurantApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
+        <state relative-caret-position="330">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -984,21 +706,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/config/AsyncTaskConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="180">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/5.2.0/amqp-client-5.2.0-sources.jar!/com/rabbitmq/client/Channel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41811">
-          <caret line="1290" column="9" selection-start-line="1290" selection-start-column="9" selection-end-line="1290" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/5.2.0/amqp-client-5.2.0-sources.jar!/com/rabbitmq/client/impl/recovery/AutorecoveringChannel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
+        <state relative-caret-position="450">
           <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
           <folding>
             <element signature="e#28680#28681#0" expanded="true" />
@@ -1007,47 +722,253 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/5.2.0/amqp-client-5.2.0-sources.jar!/com/rabbitmq/client/ShutdownListener.java">
+    <entry file="file://$PROJECT_DIR$/当前架构.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/死信队列.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/死信队列数据流转.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/死信队列设置方法.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/怎么样变成死信.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deliveryman-service/src/main/java/com/hr/deliverymanserver/config/AsyncTaskConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+        <state relative-caret-position="180">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/5.2.0/amqp-client-5.2.0-sources.jar!/com/rabbitmq/client/AMQP.java">
+    <entry file="file://$PROJECT_DIR$/deliveryman-service/src/main/java/com/hr/deliverymanserver/config/RabbitConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-845">
-          <caret line="1830" column="27" selection-start-line="1830" selection-start-column="27" selection-end-line="1830" selection-end-column="27" />
+        <state relative-caret-position="180">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order-server/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-130" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/server/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1491">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-amqp/2.2.6.RELEASE/spring-amqp-2.2.6.RELEASE.jar!/org/springframework/amqp/core/Binding.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="44" column="30" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/config/AsyncTaskConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-amqp/2.2.6.RELEASE/spring-amqp-2.2.6.RELEASE-sources.jar!/org/springframework/amqp/core/Binding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/OrderServerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#255#256#0" expanded="true" />
+            <element signature="e#328#329#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.2.6.RELEASE/spring-rabbit-2.2.6.RELEASE.jar!/org/springframework/amqp/rabbit/core/RabbitAdmin.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="98" column="16" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="16" />
+          <folding>
+            <element signature="e#4774#4775#0" expanded="true" />
+            <element signature="e#4820#4821#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/server/OrderMessageService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1679">
-          <caret line="130" column="29" selection-start-line="130" selection-start-column="29" selection-end-line="130" selection-end-column="29" />
+        <state relative-caret-position="-4313">
+          <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restaurant-server/src/main/java/com/hr/restaurantserver/service/OrderMessageService.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.2.6.RELEASE/spring-context-5.2.6.RELEASE-sources.jar!/org/springframework/context/ApplicationContextAware.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-885">
-          <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
+        <state relative-caret-position="347">
+          <caret line="73" column="38" lean-forward="true" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.2.6.RELEASE/spring-context-5.2.6.RELEASE-sources.jar!/org/springframework/context/ApplicationContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="57" column="65" selection-start-line="57" selection-start-column="65" selection-end-line="57" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.2.6.RELEASE/spring-beans-5.2.6.RELEASE.jar!/org/springframework/beans/factory/ListableBeanFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-360">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.2.6.RELEASE/spring-beans-5.2.6.RELEASE.jar!/org/springframework/beans/factory/InitializingBean.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/config/RabbitConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="43" column="47" selection-start-line="39" selection-start-column="6" selection-end-line="43" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/server/OrderService.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/5.2.0/amqp-client-5.2.0-sources.jar!/com/rabbitmq/client/ShutdownListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="52" column="28" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
+        <state relative-caret-position="347">
+          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order-server/src/main/java/com/hr/orderserver/config/RabbitBeanConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="114" column="19" selection-start-line="114" selection-start-column="19" selection-end-line="114" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="e#838#839#0" expanded="true" />
+            <element signature="e#878#879#0" expanded="true" />
+            <element signature="e#925#926#0" expanded="true" />
+            <element signature="e#1612#1613#0" expanded="true" />
+            <element signature="e#2005#2006#0" expanded="true" />
+            <element signature="e#2121#2122#0" expanded="true" />
+            <element signature="e#2505#2506#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.2.6.RELEASE/spring-rabbit-2.2.6.RELEASE-sources.jar!/org/springframework/amqp/rabbit/connection/ConnectionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="31" column="34" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.2.6.RELEASE/spring-rabbit-2.2.6.RELEASE-sources.jar!/org/springframework/amqp/rabbit/connection/AbstractRoutingConnectionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.2.6.RELEASE/spring-rabbit-2.2.6.RELEASE-sources.jar!/org/springframework/amqp/rabbit/connection/ConnectionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.2.6.RELEASE/spring-rabbit-2.2.6.RELEASE-sources.jar!/org/springframework/amqp/rabbit/connection/CachingConnectionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="586">
+          <caret line="534" column="24" selection-start-line="534" selection-start-column="24" selection-end-line="534" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#CachingConnectionFactory#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/src/jdk1.8.0_191/src.zip!/java/util/function/Function.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-237">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-amqp/2.2.6.RELEASE/spring-amqp-2.2.6.RELEASE-sources.jar!/org/springframework/amqp/core/DeclarableCustomizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-amqp/2.2.6.RELEASE/spring-amqp-2.2.6.RELEASE-sources.jar!/org/springframework/amqp/core/Exchange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.2.6.RELEASE/spring-rabbit-2.2.6.RELEASE-sources.jar!/org/springframework/amqp/rabbit/core/RabbitAdmin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="603" column="30" selection-start-line="603" selection-start-column="30" selection-end-line="603" selection-end-column="30" />
+          <folding>
+            <element signature="e#6373#6374#0" expanded="true" />
+            <element signature="e#6410#6411#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.2.6.RELEASE/spring-rabbit-2.2.6.RELEASE-sources.jar!/org/springframework/amqp/rabbit/core/RabbitTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="2046" column="39" selection-start-line="2046" selection-start-column="39" selection-end-line="2046" selection-end-column="39" />
+          <folding>
+            <element signature="e#76363#76364#0" expanded="true" />
+            <element signature="e#76416#76417#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.2.6.RELEASE/spring-rabbit-2.2.6.RELEASE-sources.jar!/org/springframework/amqp/rabbit/core/ChannelCallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/5.2.0/amqp-client-5.2.0-sources.jar!/com/rabbitmq/client/Channel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-780">
+          <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
         </state>
       </provider>
     </entry>

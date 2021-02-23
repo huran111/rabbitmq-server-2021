@@ -39,7 +39,7 @@ public class OrderMessageService {
     private OrderDetailDao orderDetailDao;
     ObjectMapper objectMapper = new ObjectMapper();
 
-
+    //底层channel声明 绕开了spring容器
     @Async
     public void handleMessage() throws IOException, TimeoutException, InterruptedException {
         log.info("start linstening message");

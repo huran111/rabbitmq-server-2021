@@ -11,7 +11,6 @@ import com.hr.restaurantserver.enummeration.RestaurantStatus;
 import com.hr.restaurantserver.po.ProductPO;
 import com.hr.restaurantserver.po.RestaurantPO;
 import com.rabbitmq.client.*;
-import com.rabbitmq.client.AMQP.BasicProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
@@ -43,6 +42,16 @@ public class OrderMessageService {
         try (Connection connection = connectionFactory.newConnection();
              Channel channel = connection.createChannel()) {
             this.channel = channel;
+
+            //接收死信的交换机
+            channel.exchangeDeclare("exchange.dlx",
+                    BuiltinExchangeType.TOPIC,
+                    //false exchange 不需要自动是删除
+                    true, false, null);
+            //exclusive  channel独占这个队列
+            //接收死信的队列
+            channel.queueDeclare("queue.dlx", true, false, false, null);
+            channel.queueBind("queue.dlx", "exchange.dlx", "#");
             channel.exchangeDeclare(
                     "exchange.order.restaurant",
                     BuiltinExchangeType.DIRECT,
@@ -51,7 +60,10 @@ public class OrderMessageService {
                     null);
             //设置队列的参数
             Map<String, Object> args = new HashMap<>(16);
-            args.put("x-message-ttl", 15000);
+            args.put("x-message-ttl", 120000);
+            args.put("x-max-length", 5);
+            //exchange.dlx ：交换机名称
+            args.put("x-dead-letter-exchange", "exchange.dlx");
             channel.queueDeclare(
                     "queue.restaurant",
                     true,
@@ -99,8 +111,9 @@ public class OrderMessageService {
             }
             log.info("sendMessage:restaurantOrderMessageDTO:{}", orderMessageDTO);
             String messageToSend = objectMapper.writeValueAsString(orderMessageDTO);
+            //requeue =false 不让重回队列 =死信
+            //   channel.basicNack(message.getEnvelope().getDeliveryTag(), false,false);
             channel.basicAck(message.getEnvelope().getDeliveryTag(), false);
-
             channel.basicPublish("exchange.order.restaurant", "key.order", true, null, messageToSend.getBytes());
             try {
                 Thread.sleep(1_000);
